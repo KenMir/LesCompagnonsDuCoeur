@@ -1,0 +1,61 @@
+<body class="bodyaddformation">
+
+    <div class="manage-container">
+        <h1 class="hache-gestion-form">Gérer vos maraudes</h1>
+        <hr class="hr-gestion-form">
+        <table class="product-manage-table">
+            <thead>
+                <tr class="table-row">
+                    <th class="table-head">DATE </th>
+                    <th class="table-head">NOM RUE </th>
+                    <th class="table-head">NUM RUE</th>
+                    <th class="table-head"> VILLE</th>
+                    <th class="table-head">CODE POSTAL</th>
+                    <th class="table-head">Edit</th>
+                    <th class="table-head">Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each maraude}}
+                <tr class="table-row">
+                    {{!-- <td class="table-division">
+                        <div class="formation-img">
+                            <img src="{{this.image}}" alt="img" class="table-image" />
+                        </div>
+                    </td> --}}
+                    <td class="table-division">
+                        <div>{{this.date}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.lieu.nomRue}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.lieu.numRue}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.lieu.ville}}</div>
+                    </td>
+                    <td class="table-division">
+                        <div>{{this.lieu.code_postal}}</div>
+                    </td>
+                    <td class="table-division">
+                        <a href="/maraude/form-edit/{{this._id}}" data-id-formation="{{this._id}}"><i
+                                class="fa fa-edit table-icon"></i> </a>
+                    </td>
+                    <td class="table-division">
+                        <a href="/maraude/form-delete/{{this._id}}" data-id-formation="{{this._id}}" aria-hidden="true">
+                            <i class="fa fa-trash table-icon"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+                {{#unless maraude}}
+                <tr>
+                    <td colspan="6" class="no-maraude">Il n'y a pas de maraude pour le moment</td>
+                </tr>
+                {{/unless}}
+            </tbody>
+        </table>
+    </div>
+</body>

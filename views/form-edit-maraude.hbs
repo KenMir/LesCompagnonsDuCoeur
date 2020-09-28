@@ -1,0 +1,61 @@
+<body class="bodyaddformation">
+    <div class="edit-container">
+        <form method="post" action="/maraude/form-edit/{{maraude._id}}" class="edit-product-form">
+            <h2 class="edit-formation"> Edit formation</h3>
+
+                {{!-- <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-name" class="label-name label">Nom de rue</label>
+                    <input id="sneaker-name" type="text" class="input-text input" placeholder="Intitulé"
+                        value="{{maraude.title}}" name="title">
+                </div> --}}
+                <div class="formation-item">
+                    <label for="form-date" class="label-descr label">Date</label>
+                    <input id="form-date" type="date" class="form-mini-descr form-input line"
+                        placeholder="ex: 12/09/2020" name="date">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-ref" class="label-ref label">Numéro de rue</label>
+                    <input id="sneaker-ref" type="number" class="input-text input" placeholder="numRue"
+                        value="{{maraude.lieu.numRue}}" name="numRue">
+                </div>
+                {{!-- <div class="form-item-wrapper flexed-item">
+      <label for="sneaker-size" class="label-ref label">Description courte</label>
+      <input id="sneaker-size" type="text" class="input-text input" placeholder="Description courte" value="{{formation.minidescription}}" name="minidescription">
+    </div> --}}
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-descr" class="label-descr label">nomRue</label>
+                    <input id="sneaker-descr" type="text" class="input-text input" placeholder="nomRue"
+                        value="{{maraude.lieu.nomRue}}" name="nomRue">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-code" class="label-descr label">Code postal</label>
+                    <input id="sneaker-code" type="number" class="input-text input" placeholder="code-postale"
+                        value="{{maraude.lieu.code_postale}}" name="code_postal">
+                </div>
+                <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-ville" class="label-descr label">Ville</label>
+                    <input id="sneaker-ville" type="text" class="input-text input" placeholder="ville"
+                        value="{{maraude.lieu.ville}}" name="ville">
+                </div>
+
+                {{!-- <div class="form-item-wrapper flexed-item">
+                    <label for="sneaker-main-cat" class="label-main-cat label">Categorie</label>
+                    <select id="main_category" class="select" required name="category">
+                        <option value="-1" disabled selected>Choisir une categorie</option>
+                        <option value="men">développement personel</option>
+                        <option value="women">développement professionnel</option>
+                        <option value="kids">enfants</option>
+                    </select>
+                </div> --}}
+                {{!-- <div class="form-item-wrapper flexed-item">
+      <label class="label">Tags</label>
+      {{> form_tags_select}}
+    </div> --}}
+                <button class="edit-form-btn">Modifier cette Maraude</button>
+        </form>
+    </div>
+
+
+
+
+</body>

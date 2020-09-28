@@ -1,0 +1,110 @@
+@import "./signin.css";
+@import "./header.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  bottom: 100px;
+}
+
+/* body {} */
+
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}*/
+
+a {
+  color: #00b7ff;
+}
+
+/* manage-maraudes*/
+
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.annonce-img {
+  height: 300px;
+  width: 300px;
+}
+
+/* 
+MANAGE */
+
+.formation-img img {
+  max-width: 250px;
+}
+
+.manage-container {
+  padding-bottom: 14em;
+  padding-top: 5em;
+  color: dimgrey;
+  margin-left: 2em;
+  margin-right: 2em;
+
+}
+
+.hache-gestion-form {
+  text-align: center;
+}
+
+.hr-gestion-form {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+.product-manage-table {
+  margin-top: 2em;
+
+}
+
+.no-formations {
+  color: slategrey;
+  text-align: center;
+}
+
+.all-maraudes {
+  border: 1px solid;
+  border-radius: 0.3rem;
+  padding: 10px;
+  flex: 1;
+  flex-direction: column;
+  min-height: 120px;
+  min-width: 220px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-product-form {
+  border: thin solid #6495ed;
+}
+
+tbody {
+  text-align: center;
+}
+
+td,
+th {
+  border: thin solid #6495ed;
+  width: 50%;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+}

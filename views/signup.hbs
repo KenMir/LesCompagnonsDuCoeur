@@ -1,0 +1,28 @@
+<form method="post" action="/auth/user-signup" class="form" enctype="multipart/form-data">
+    <h1 class="title">Signup</h1>
+
+    <label class="label" for="input-username">NOM</label>
+    <input id="input-username" class="input" type="text" placeholder="sera visible par les utilisateurs du site"
+        name="lastname">
+
+    <label class="label" for="input-username">PRENOM</label>
+    <input id="input-username" class="input" type="text" placeholder="sera visible par les utilisateurs du site"
+        name="firstname">
+
+    <label class="label" for="input-email">VOTRE EMAIL</label>
+    <input id="input-email" class="input" type="email" placeholder="doit être une adresse valide" name="email">
+
+    <label class="label" for="input-password">VOTRE MOT DE PASSE</label>
+    <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+        name="password">
+
+    <label class="label" for="input-password">VOTRE NUMERO DE TELEPHONE</label>
+    <input id="input-number" class="input" type="tel" placeholder="numéro valide" name="number" minlength="10"
+        maxlength="10">
+
+    {{!-- <label class="label" for="input-password">ADRESSE</label>
+    <input id="input-password" class="input" type="password" placeholder="assez complexe par mesure de sécurité"
+        name="password" value="fake-pass-12345"> --}}
+
+    <button class="btn">ok !</button>
+</form>

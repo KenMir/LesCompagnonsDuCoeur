@@ -1,0 +1,21 @@
+<div>
+    <a href="/maraude/form-create-maraude"><button>CREER UNE NOUVELLE MARAUDE</button></a>
+</div>
+
+<div>
+
+    {{#each maraudes}}
+    {{!-- pour chaque (each) maraude que je crée, jaffiche ses données (this.date...)  --}}
+    <div class="all-maraudes">
+        <p>{{this.date}}</p>
+        <p>{{this.lieu.nomRue}}</p>
+        <p>{{this.lieu.numRue}}</p>
+        <p>{{this.lieu.ville}}</p>
+        <p>{{this.lieu.code_postal}}</p>
+
+        <form method="post" action="/maraude/inscription/{{this._id}}/user/{{../currentUser._id}}">
+            <button>Participer</button>
+        </form>
+    </div>
+</div>
+{{/each}}
