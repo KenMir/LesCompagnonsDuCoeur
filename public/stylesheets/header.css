@@ -1,277 +1,152 @@
-/* html,
- body,
-header,
-figure,
-a,
-img,
-nav,
-ul,
-li,
-div,
-span
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline; 
-}*/
-
-/* **********desktop*********** */
-
-header {
-    width: 100%;
-    min-width: 7vh;
-    background: #7db926;
-    /* padding-left: 10px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    width: 175px;
-    width: 100px;
-    top: 50px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    min-height: 7vh;
-    width: 300px;
-}
-
-header>a {
-    text-decoration: none;
-    color: white;
-    width: 200px;
-}
-
-/*UL*/
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    background: violet;
-    width: 100%;
-}
-
-/*LI*/
-.nav-links>li {
-    list-style: none;
-    background: tomato;
-    width: 100%;
-
-}
-
-/*A*/
-.nav-links a {
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    width: 400px;
-    background: yellowgreen;
-}
-
-/*BURGER*/
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-
-
-@media screen and (max-width:758px) {
-    .nav-links {
-        position: absomi;
-    }
-}
-
-
-/* header {
+header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    padding: 0 2%;
-    top: 0;
-    background: greenyellow;
 }
 
-.logo {
-    width: 100px;
-    height: 75px;
+/*la nav contient les items*/
+nav{
+    display: flex;
+    justify-content: flex-end;
+    /* justify-content: space-around; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    min-height: 8vh;
+    width: 800px;
+    right: 0;
+    margin-top: 30px;
+    /* position: absolute; */
+
 }
 
-/* navigation */
-/*nav {
-    height: 80px;
-    background-color: white;
-    margin-top: 50px;
-}
 
-.nav-links {
+/* what appears on click of the menu burger*/
+/*targetting ul*/
+.nav-links{
+    width: 800px;
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
-    width: 850px;
-    height: 100px;
-    margin-top: -5px;
 }
 
-.nav-links>li {
+/*targetting li*/
+.nav-links>li{
     list-style: none;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 50px;
-    background: #ed8b53;
-    border-radius: 15px;
-    margin-top: 20px;
+    width: 100px;
 }
 
-.nav-links>li.nav-item {
-    display: none;
-}
-
-
-.nav-links>li>a {
+/*targetting a*/
+.nav-links a{
     text-decoration: none;
-    font-size: 16px;
-    color: white;
-    padding: 10px;
-    width: 200px;
-    margin-left: 5px;
+    font-size: 20px;
+    color: #8AB945;
 }
 
-.nav-links li:hover {
-    background: #5ec1b9;
+.nav-links a:hover{
+    color: #273F23;
 }
 
-/* **********tablet********** */
+/*targetting the burger class (contains the span)*/
+.burger{
+    display:none;
+    cursor: pointer;
+}
 
-/* @media screen and (max-width:1080px) {
-    body {
-        overflow-x: hidden;
+@media screen and (min-width: 980px){
+    h2{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 60px;
     }
 
-    .logo {
-        width: 180px;
-        height: 82px;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 60px;
-        height: 500px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 250px;
-        transform: translateX(150%);
-        transition: transform .5s ease-in-out;
-    }
-
-    .nav-links>li.nav-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: none;
-    }
-
-    .nav-links>li.nav-item:hover {
-        background: none;
-    }
-
-    .nav-active {
-        transform: translateX(0%);
-    } */
-
-/* **burger** /
-
-    .burger {
-        display: block;
-        width: 8vw;
-        height: 10vh;
-        position: relative;
-        right: 20px;
-        top: -2vh;
-    }
-
-    .burger span {
+    header+section{
         width: 100%;
-        height: 8px;
-        background: #ed8b53;
-        display: block;
-        position: absolute;
-        transform: translateY(1vh);
-        border-radius: 50px;
-    }
-
-    / addition span for burger /
-    .burger span::before,
-    .burger span::after {
-        content: '';
-        width: 100%;
-        height: 8px;
-        position: absolute;
-        background: #ed8b53;
-        border-radius: 50px;
-    }
-
-    .burger span::before {
-        transform: translateY(-12px);
-    }
-
-    .burger span::after {
-        transform: translateY(12px);
-    }
-
-    .burger.active span {
-        background-color: transparent;
-    }
-
-    .burger.active span::before {
-        transform: translateY(0px) rotateZ(45deg);
-        background-color: #5ec1b9;
-    }
-
-    .burger.active span::after {
-        transform: translateY(0px) rotateZ(-45deg);
-        background-color: #5ec1b9;
+        height: 80vh;
+        padding-top: 15%;
     }
 }
+ a.compose{
+     display: none;
+ }
 
-/ **smartphone** */
+@media screen and (max-width: 979px){
 
-/* @media screen and (max-width: 767px) {
+.nav-links{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 8vh; /*correspond to the height of the nav*/
+    background: white;
+    display: flex;
+    flex-direction: column; /*because i want them one below the other*/
+    align-items: center; /*acts as justify-content because we used column*/
+    width: 50%;
+    transform: translateX(100%); /*animation until last item je le fais disparaitre*/
+    transition: transform .5s ease-in-out; /*make the animation smooth*/
+}
 
-        header {
-            height: 70px;
-        }
-
-        .logo {
-            width: 100px;
-            height: 46px;
-        }
-
-        .burger {
-            margin-top: 15px;
-        }
-
-        .nav-links {
-            top: 40px;
-        }
+/*on click, display the hidden block (works with javascript)*/
+.nav-active{
+        transform: translate(0%);
+        overflow-x: hidden; /*get rid of horizontal scroll-bar so we can't see the burger menu*/
 
     }
-} */
+
+/*now we want the menu to appear on small screen*/
+.burger{
+    display: block;
+    height: 7vh;
+    width: 7vw;
+    position: relative;
+    top: 2vh;
+    /* left: 40%; */
+    left: calc( 95% - 7vw);
+}
+
+.burger span{
+    width: 100%; /*va faire la largeur de 7vh (son parent le menu burger)*/
+    height: 4px;
+    background: chartreuse;
+    display: block;
+    position: absolute; /*we set the parent to relative so the span could depend on it*/
+    transform: translateY(1vh);
+}
+
+/*create elements before and after the span that have those properties*/
+.burger span::before,.burger span::after{
+    content: ''; /*generate content before and after the span */
+    width: 100%;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: chartreuse;
+}
+
+/*they don't appear yet because they are at the same position as the main span*/
+/*we'll move them 10px up and 10px down*/
+.burger span::before{
+    transform: translateY(-1vh);
+    height: 4px;
+
+}
+.burger span::after{
+    transform: translateY(1vh);
+    height: 4px;
+
+}
+
+/*let's make our X animation*/
+/*to the first span*/
+.burger.active span::before{
+    transform: translateY(0px) rotateZ(45deg); /*the 0px corresponds to the pivot*/
+}
+/*we hide the second span*/
+.burger.active span{
+    background: transparent;
+}
+/*third span*/
+.burger.active span::after{
+    transform: translateY(0px) rotateZ(-45deg);
+}
+}

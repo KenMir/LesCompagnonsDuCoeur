@@ -1,0 +1,85 @@
+footer {
+    bottom: 0;
+    padding: 30px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer.absolute {
+    position: absolute;
+}
+
+footer>ul {
+    list-style: none;
+}
+
+footer>ul>li>a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 700;
+}
+
+.mention{
+    color: #8AB945;
+}
+
+figure.reseaux {
+    width: 30px;
+    float: right;
+    margin-left: 10px;
+}
+
+.insta, .fb, .paypal, .snap{
+    width: 30px;
+    height: 30px;
+}
+
+footer #graphismefootergauche {max-height: 50px;
+padding: 0}
+
+@media screen and (max-width: 767px) {
+    footer {
+
+        margin-bottom: 10px;
+        padding: 30px 15px
+    }
+}
+
+/* footer {
+    background: #aef359;
+    opacity: 50;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 50px;
+    height: 50px;
+}
+
+.media {
+    width: 600px;
+    height: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    width: 600px;
+    height: 100px;
+    float: right;
+}
+
+.media:hover {
+    opacity: 0.5;
+}
+
+.medias {
+    width: 100px;
+    height: 100px;
+}
+
+.mediaa {
+    bottom: 0;
+}
+ */

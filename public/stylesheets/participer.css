@@ -1,0 +1,24 @@
+.maraude {
+    background: blue;
+    border: brown 5px solid;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2participer{
+    margin-top: 30px;
+}
+
+.paraparticiper{
+    margin-top: 30px;
+}
+
+.connexion, .inscription{
+    margin-top: 50px;
+    background: #8AB945;
+    display: flex;
+    justify-content: space-around;
+}

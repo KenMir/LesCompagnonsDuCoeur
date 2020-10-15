@@ -1,0 +1,49 @@
+section{
+    width: 500px;
+    /* display: flex;
+    justify-content: space-around; */
+}
+
+.h1{
+    font-size: 100px;
+    /* position: absolute;
+    top: 100px;
+    left: 200px;
+    text-align: center; */
+}
+
+.about{
+    width: 100%;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    
+}
+
+.action{
+    width: 100%;
+    background: chartreuse;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center; 
+}
+
+/* responsive */
+@media screen and (max-width: 767px) {
+     .imghome{
+        display: none;
+    }
+}
+
+

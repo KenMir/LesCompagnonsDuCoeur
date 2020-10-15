@@ -13,5 +13,5 @@ const navtoto = () => {
         nav.classList.toggle('nav-active');
     });
 }
-
+console.log(navtoto);
 navtoto();
