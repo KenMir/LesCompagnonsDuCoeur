@@ -12,7 +12,7 @@ router.get('/manage-users', protectAdminRoute, function (req, res, next) {
     userModel
         .find()
         .then((dbRres) => {
-            res.render('/dashboard/manage-users', {
+            res.render('dashboard/manage-users', {
                 users: dbRres
             });
         })

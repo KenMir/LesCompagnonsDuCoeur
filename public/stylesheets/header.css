@@ -100,7 +100,7 @@ nav{
     width: 7vw;
     position: relative;
     top: 2vh;
-    /* left: 40%; */
+    left: 40%;
     left: calc( 95% - 7vw);
 }
 

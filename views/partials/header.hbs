@@ -8,6 +8,18 @@
             <li><a href="/participer">PARTICIPER</a></li>
             <li><a href="/contact">CONTACT</a></li>
             <li><a href="/auth/signin">CONNEXION</a></li>
+            {{#if isLoggedIn}}
+            <li>
+                <a href="/dashboard/profile">
+                    <span class="btn-text">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="/auth/signout">
+                    <span class="btn-text"><i class="fas fa-power-off"></i></span>
+                </a>
+            </li>
+            {{/if}}
         </ul>
         <div class="burger">
             <span></span>

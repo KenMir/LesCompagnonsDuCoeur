@@ -27,13 +27,6 @@ const MongoStore = require("connect-mongo")(session);
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    cookie: {
-      maxAge: 60000,
-    }, // in millisec
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60, // 1 day
-    }),
     saveUninitialized: true,
     resave: true,
   })
@@ -71,7 +64,6 @@ app.use(flash());
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 app.use("/maraude", require("./routes/maraude"));
-app.use("/repas", require("./routes/repas"));
 app.use("/auth", require("./routes/auth")); // ici on use et appel le auth 
 app.use("/dashboard", require("./routes/dashboard"));
 // app.use("/home", require("./routes/home"));

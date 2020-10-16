@@ -1,24 +1,41 @@
 .maraude {
-    background: blue;
-    border: brown 5px solid;
+    background: #8AB945;
+    /* border: brown 5px solid; */
     width: 100%;
-    height: 300px;
+    height: 650px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between;
+    flex-wrap: wrap; */
 }
 
 .h2participer{
     margin-top: 30px;
+    font-size: 50px;
+    color: white;
 }
 
 .paraparticiper{
-    margin-top: 30px;
+    margin-top: 50px;
+    font-size: 25px;
+    color: white;
 }
 
 .connexion, .inscription{
-    margin-top: 50px;
-    background: #8AB945;
-    display: flex;
-    justify-content: space-around;
+    cursor: pointer;
+    margin-top: 100px;
+    background: white;
+    margin-left: 30px;
+    font-size: 25px;
+    color: #8AB945;
+    border-radius: #8AB945 5px solid;
+
+}
+
+@media screen and (max-width: 979px){
+
 }

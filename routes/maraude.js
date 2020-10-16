@@ -3,11 +3,13 @@ var router = express.Router(); // là on utilise un fonction Router de express c
 // const fileUploader = require("./../config/cloudinary");
 var moment = require("moment");
 const protectUserRoute = require("./../middlewares/protectUserRoute")
+const protectAdminRoute = require("./../middlewares/protectAdminRoute")
+
 
 const MaraudeModel = require("../models/Maraude");
 
 // afficher la page du form-create-maraude 
-router.get("/form-create-maraude", (req, res) => { // quand je tape /form-create-maraude sur mon navigateur 
+router.get("/form-create-maraude", protectAdminRoute, (req, res) => { // quand je tape /form-create-maraude sur mon navigateur 
     res.render("form-create-maraude"); //la page s'affiche
 });
 
@@ -25,25 +27,16 @@ router.get("/all-maraudes", async (req, res, next) => { // quand je tape /form-c
     }
 });
 
-// //router.get('/all', async (req, res, next) => {
-//     try {
-//         const addMaraude = await MaraudeModel.find().populate('participants')
-//         }
-//         res.render("fateliers/all-ateliers", {
-//           addMaraude
-//         })
-//       } catch (error) {
-//         next(error)
-//       }
+
 
 
 
 //route manage-maraudes
-router.get("/manage-maraudes", async (req, res, next) => {
+router.get("/manage-maraudes", protectAdminRoute, async (req, res, next) => {
     try {
         const maraude = await MaraudeModel.find();
         // await le resultat d'une action asynchrone
-        res.render("manage-maraudes", {
+        res.render("dashboard/manage-maraudes", {
             maraude,
         });
     } catch (dbErr) {
@@ -52,7 +45,7 @@ router.get("/manage-maraudes", async (req, res, next) => {
 });
 
 //----post une maraude
-router.post("/create", async (req, res, next) => {
+router.post("/create", protectAdminRoute, async (req, res, next) => {
 
     console.log("ici c req.body dans router POST", req.body);
     var date = moment(req.body.date).format("Do MMMM YYYY");
@@ -72,7 +65,7 @@ router.post("/create", async (req, res, next) => {
 
 //***********************************************************EDIT***********************************************************************
 
-router.get("/form-edit/:id", async (req, res, next) => {
+router.get("/form-edit/:id", protectAdminRoute, async (req, res, next) => {
     try {
         const editMaraude = await MaraudeModel.findById(req.params.id);
         // await le resultat d'une action asynchrone
@@ -85,7 +78,7 @@ router.get("/form-edit/:id", async (req, res, next) => {
     }
 });
 
-router.post("/form-edit/:id", async (req, res, next) => {
+router.post("/form-edit/:id", protectAdminRoute, async (req, res, next) => {
     try {
         const maraude1 = {
             lieu: {
@@ -95,7 +88,6 @@ router.post("/form-edit/:id", async (req, res, next) => {
                 code_postal: req.body.code_postal,
             },
         };
-        console.log("le body de post de Muram", req.body);
         const maraude = await MaraudeModel.findByIdAndUpdate(
             req.params.id,
             maraude1, {
@@ -112,7 +104,7 @@ router.post("/form-edit/:id", async (req, res, next) => {
 
 // ci dessous, on utilise les segment dynamique de route d'express
 // chaque mot préfixé avec : devient une variable
-// cette varibale est accessible dans la fonctin suivante sous req.params
+// cette varibale est accessible dans la fonction suivante sous req.params
 router.post("/inscription/:maraude_id/user/:user_id", async (req, res, next) => {
     console.log("post dans maraude req.params.maraude_id:", req.params.maraude_id, "user:", req.params.user_id);
     try {

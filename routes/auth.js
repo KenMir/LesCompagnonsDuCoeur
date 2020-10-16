@@ -20,7 +20,7 @@ router.get("/signin", (req, res) => {
 });
 
 router.get("/signout", (req, res) => {
-    req.session.destroy(() => res.redirect("/signin"));
+    req.session.destroy(() => res.redirect("/auth/signin"));
 });
 
 router.post("/signin", (req, res, next) => {
@@ -43,7 +43,7 @@ router.post("/signin", (req, res, next) => {
                 // vaut null si pas d'user trouvé pour ce mail
                 // si non .. retiourner une erreur au client
                 req.flash("error", "Identifiants incorrects");
-                res.redirect("/signin");
+                res.redirect("/auth/signin");
             }
             // si oui comparer le mdp crypté stocké en bdd avec la chaîne en clair envoyée depuis le formulaire
             const checkPassword = bcrypt.compareSync(
@@ -82,7 +82,7 @@ router.post("/signin", (req, res, next) => {
  */
 router.post("/user-signup", uploader.single("avatar"), (req, res, next) => {
     const user = req.body;
-    // console.log(user);
+    console.log(user);
     if (req.file) {
         // si un fichier a été uploadé
         user.avatar = req.file.secure_url; // on l'associe à user

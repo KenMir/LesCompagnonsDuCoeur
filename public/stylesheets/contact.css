@@ -2,7 +2,6 @@
     margin-top: 150px;
     font-size: 36px;
     text-align: center;
-    margin-bottom: 30px;
     color: #333333;
     font-weight: 700;
     font-family: 'Lora', serif !important;
@@ -17,14 +16,16 @@ form {
 }
 
 input {
+    margin-top: 15px;
     width: 90%;
     min-width: 310px;
     height: 30%;
-    border: 2px solid chartreuse;
+    border: 2px solid #8AB945;
     border-radius: 10px;
     margin-bottom: 30px;
     padding: 10px;
     font-size: 18px;
+    outline: none;
     /* color: #333333; */
 }
 
@@ -40,10 +41,11 @@ textarea:hover {
 
 textarea {
     width: 90%;
+    margin-top: 15px;
     min-width: 310px;
     height: 200px;
     resize: none;
-    border: 2px solid chartreuse;
+    border: 2px solid #8AB945;
     border-radius: 10px;
     font-size: 18px;
     padding: 5px;
@@ -54,13 +56,13 @@ input[type="submit"] {
     cursor: pointer;
     width: 20%;
     border-radius: 10px;
-    background: chartreuse;
+    background: #8AB945;
     color: white;
     font-size: 20px;
     transition: background .6s;
     margin-bottom: 50px;
     min-width: 150px;
-    border: 1px solid chartreuse;
+    border: 1px solid #8AB945;
 }
 
 /* input:hover[type="submit"] {
@@ -80,40 +82,10 @@ input[type="submit"] {
 }
 
 
-@media screen and (max-width: 1279px) {
-
-    blockquote {
-        margin: 50px 150px;
-    }
-}
-
-@media screen and (max-width: 1074px) {
-
-    blockquote {
-        margin: 50px 148px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-
-    blockquote {
-        margin: 50px 0;
-    }
-}
 
 @media screen and (max-width: 768px) {
     #main-content {
         padding: 20px;
-    }
-
-    blockquote {
-        border-left: 5px solid #cccccc;
-        min-width: 320px;
-    }
-
-    blockquote p {
-        margin-left: 20px;
-        text-align: justify;
     }
 
     #form {
