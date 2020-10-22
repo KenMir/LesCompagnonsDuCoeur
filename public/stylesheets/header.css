@@ -1,29 +1,34 @@
-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+body{
+    overflow: hidden;
 }
-
 /*la nav contient les items*/
 nav{
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex; */
     /* justify-content: space-around; */
-    /* flex-direction: row; */
     /* align-items: center; */
     min-height: 8vh;
-    width: 800px;
+    width: 500px;
     right: 0;
-    margin-top: 30px;
-    /* position: absolute; */
-
+    top: 4vh;
+    position: absolute;
 }
 
+/*par contre c'est le header qui contient les h1 il faut lui remettre algn item center*/
+/* header>a{
+    text-decoration: none;
+    color: white;
+    width: 200px;
+}
+
+header>a>h1{
+    text-transform: lowercase;
+    font-weight: 700;
+ 
+} */
 
 /* what appears on click of the menu burger*/
 /*targetting ul*/
 .nav-links{
-    width: 800px;
     display: flex;
     justify-content: space-around;
     font-family: sans-serif;
@@ -32,18 +37,13 @@ nav{
 /*targetting li*/
 .nav-links>li{
     list-style: none;
-    width: 100px;
 }
 
 /*targetting a*/
 .nav-links a{
     text-decoration: none;
     font-size: 20px;
-    color: #8AB945;
-}
-
-.nav-links a:hover{
-    color: #273F23;
+    color: #67BE4B;
 }
 
 /*targetting the burger class (contains the span)*/
@@ -51,6 +51,15 @@ nav{
     display:none;
     cursor: pointer;
 }
+/*
+header + section{
+    display: flex;
+    justify-content: space-around; place in the center/
+    align-items: flex-end; place at the bottom
+    flex-wrap: wrap;
+    padding-bottom: 10vh; want to bring them up a little
+}
+/*will be active as soon as we reach 768px (tablet format)*/
 
 @media screen and (min-width: 980px){
     h2{
@@ -69,15 +78,66 @@ nav{
  a.compose{
      display: none;
  }
+/*
+header + section{
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, .6)/*url(/assets/img/addi-sweater.jpg) 0 0 no-repeat;/
+
+}*/
 
 @media screen and (max-width: 979px){
+
+    /*pour demain*/
+    
+    article>header>h2{
+        margin-top: 10px;
+        font-size: 25px;
+        text-align: right;
+    }
+    
+    article>header>h3{
+        font-size: 15px;
+        color: gray;
+        text-align: right;
+    }
+
+    a.compose{
+        display: block;
+        background: yellowgreen;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        line-height: 50px;
+    }
+    a#mouse>span{
+        visibility: hidden;
+    }
+
+    /*article{
+        flex: 1; /*for the articles to stretch, put here in child not parent
+    }*/
+    
+
+    #bgvideo{
+        display: none;
+    }
+    h2{
+        font-size: 15px;
+    }
+    h3{
+        font-size: 25px;
+    }
 
 .nav-links{
     position: absolute;
     right: 0;
-    height: 100vh;
+    min-height: 500px;
     top: 8vh; /*correspond to the height of the nav*/
-    background: white;
+    background: gray;
     display: flex;
     flex-direction: column; /*because i want them one below the other*/
     align-items: center; /*acts as justify-content because we used column*/
@@ -100,14 +160,14 @@ nav{
     width: 7vw;
     position: relative;
     top: 2vh;
-    left: 40%;
+    /* left: 40%; */
     left: calc( 95% - 7vw);
 }
 
 .burger span{
     width: 100%; /*va faire la largeur de 7vh (son parent le menu burger)*/
     height: 4px;
-    background: chartreuse;
+    background: #67BE4B;
     display: block;
     position: absolute; /*we set the parent to relative so the span could depend on it*/
     transform: translateY(1vh);
@@ -117,23 +177,19 @@ nav{
 .burger span::before,.burger span::after{
     content: ''; /*generate content before and after the span */
     width: 100%;
-    height: 2px;
+    height: 4px;
     left: 0;
     position: absolute;
-    background: chartreuse;
+    background: #67BE4B;
 }
 
 /*they don't appear yet because they are at the same position as the main span*/
 /*we'll move them 10px up and 10px down*/
 .burger span::before{
     transform: translateY(-1vh);
-    height: 4px;
-
 }
 .burger span::after{
     transform: translateY(1vh);
-    height: 4px;
-
 }
 
 /*let's make our X animation*/
@@ -150,3 +206,4 @@ nav{
     transform: translateY(0px) rotateZ(-45deg);
 }
 }
+

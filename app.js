@@ -13,6 +13,7 @@ var dev_mode = false;
 const hbs = require("hbs");
 const flash = require("connect-flash");
 
+
 var app = express();
 
 const mongoose = require("mongoose");
@@ -22,7 +23,6 @@ require("./config/mongodb"); // database initial setup
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-
 // SESSION SETUP
 app.use(
   session({

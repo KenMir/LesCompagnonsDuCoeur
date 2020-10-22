@@ -7,7 +7,7 @@
     {{#each maraudes}}
     {{!-- pour chaque (each) maraude que je crée, jaffiche ses données (this.date...)  --}}
     <div class="all-maraudes">
-        <p>{{this.date}}</p>
+        <p>{{#formatDate this.date}} {{/formatDate}}</p>
         <p>{{this.lieu.nomRue}}</p>
         <p>{{this.lieu.numRue}}</p>
         <p>{{this.lieu.ville}}</p>

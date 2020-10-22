@@ -1,4 +1,5 @@
 const hbs = require("hbs");
+const moment = require("moment");
 
 // CUSTOM HELPERS
 
@@ -73,6 +74,10 @@ hbs.registerHelper("setCheckedbox", function (checkboxValue, searchedValue) {
 // ex usage : {{setSelected this._id ../product.category}}
 hbs.registerHelper("setSelected", function (optionValue, searchedValue) {
     return optionValue.toString() === searchedValue.toString() ? "selected" : "";
+});
+
+hbs.registerHelper("formatDate", function (date) {
+    return moment(date).locale('fr').format('MMMM Do YYYY');
 });
 
 /**

@@ -8,6 +8,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     background: white;
+    margin-bottom: 20px;
 }
 
 /* footer.absolute {

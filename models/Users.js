@@ -9,12 +9,6 @@ const userSchema = new Schema({
     email: String,
     password: String,
     number: Number,
-    // adresse: {
-    //     numRue: Number,
-    //     nomRue: String,
-    //     ville: String,
-    //     code_postal: Number,
-    // },
     role: {
         type: String,
         enum: ["admin", "user"],

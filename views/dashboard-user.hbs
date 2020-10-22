@@ -1,31 +1,11 @@
 <div class="flex">
     <div style="background-image:url({{currentUser.avatar}})" class="profile avatar"></div>
-    <h1 class="title">Bienvenue {{currentUser.username}}</h1>
+    <h1 class="title">Bienvenue {{currentUser.firstname}}</h1>
     {{!-- les maraudes ou il participent on les affiches dans son dashboard
           les maraudes ou il peut participer un lien pour all maraude pour qui puisse voir  --}}
-    <a href="/maraude/all-maraudes"><button>Participer aux maraudes</button></a>
 </div>
 
-{{!-- <h2 class="title">Gérer les adresses (AJAX)</h2>
-
-<form class="form create address">
-    <label class="label" for="street-name" class="label">Nom de rue</label>
-    <input class="input" id="street-name" name="streetName" type="text" value="{{currentUser.address.streetName}}">
-    <label class="label" for="street-number" class="label">Numero de rue</label>
-    <input class="input" id="street-number" name="streetNumber" type="text"
-        value="{{currentUser.address.streetNumber}}">
-    <label class="label" for="city" class="label">Ville</label>
-    <input class="input" id="city" name="city" type="text" value="{{currentUser.address.city}}">
-    <label class="label" for="zipcode" class="label">Code Postal</label>
-    <input class="input" id="zipcode" name="zipcode" type="number" value="{{currentUser.address.zipcode}}">
-    <label class="label" for="country" class="label">Pays</label>
-    <input class="input" id="country" name="country" type="text" value="{{currentUser.address.country}}">
-    <button class="btn">ok</button>
-</form> --}}
-
-
-<hr>
-
+<a href="/maraude/all-maraudes"><button class="buttonDashboardUser">Participer aux maraudes</button></a>
 <form method="post" action="/profile/edit/infos/{{currentUser._id}}" class="form">
     <h2 class="title">Mettre à jour votre profil</h2>
     <label for="input-username" class="is-clickable">Nom</label>
@@ -35,7 +15,6 @@
     <button class="btn">Ok</button>
 </form>
 
-<hr>
 
 <form method="post" action="/profile/edit/password/{{user._id}}" class="form">
     <h2 class="title">Mettre à jour votre mot de passe</h2>

@@ -1,0 +1,15 @@
+
+
+.dash{
+    cursor: pointer;
+    margin-top: 100px;
+    background: white;
+    margin-left: 30px;
+    font-size: 25px;
+    color: #8AB945;
+    border-radius: #8AB945 5px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

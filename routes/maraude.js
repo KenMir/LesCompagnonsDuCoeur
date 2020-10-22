@@ -15,10 +15,13 @@ router.get("/form-create-maraude", protectAdminRoute, (req, res) => { // quand j
 
 //----------  get all maraudes
 /* GET all-maraudes page */
-router.get("/all-maraudes", async (req, res, next) => { // quand je tape /form-create-maraude sur mon navigateur
+
+
+router.get("/all-maraudes", async (req, res, next) => {
     console.log("ici c req.body dans router get", req.body);
     try {
         const maraudes = await MaraudeModel.find().populate('participants');
+        console.log(maraudes.data)
         res.render("all-maraudes", {
             maraudes,
         });
@@ -48,10 +51,10 @@ router.get("/manage-maraudes", protectAdminRoute, async (req, res, next) => {
 router.post("/create", protectAdminRoute, async (req, res, next) => {
 
     console.log("ici c req.body dans router POST", req.body);
-    var date = moment(req.body.date).format("Do MMMM YYYY");
-    console.log("moment", date);
+    // var date = moment(req.body.date).format("Do MMMM YYYY");
+    // console.log("moment", date);
     const maraude2 = {
-        date: date,
+        date: req.body.date,
         lieu: {
             numRue: req.body.numrue,
             nomRue: req.body.nomRue,

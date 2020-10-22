@@ -26,7 +26,7 @@ router.get('/manage-users', protectAdminRoute, function (req, res, next) {
 router.get("/user-delete/:id", (req, res, next) => {
     userModel
         .findByIdAndDelete(req.params.id)
-        .then((dbRes) => res.redirect("/users/manage-users"))
+        .then((dbRes) => res.redirect("/dashboard/manage-users"))
         .catch(next);
 });
 

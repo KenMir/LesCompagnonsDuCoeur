@@ -1,5 +1,5 @@
-<div class="big-container product-manage-wrapper flexed-item">
-    <form action="/maraude/create" method="post" class="add-product-form">
+<div class="form">
+    <form id="form" action="/maraude/create" method="post" class="add-product-form">
         {{#if msg}}
         <p class="msg {{msg.statu}}">{{msg.txt}}</p>
         {{/if}}
@@ -26,17 +26,6 @@
             <label for="code-postale" class="label-descr label">Code postal</label>
             <input id="code-postal" type="number" class="input-text input" placeholder="ex: 93100" name="code_postal">
         </div>
-
-        {{!-- main category --}}
-        {{!-- <div class="form-item-wrapper flexed-item">
-            <label for="category" class="label-main-cat label">Main category</label>
-            <select id="category" class="select" required>
-                <option value="-1">Choose a category</option>
-                {{#each maraudes}}
-                <option value="{{this._id}}">{{this.ville}}</option>
-                {{/each}}
-            </select>
-        </div> --}}
-        <button>ok</button>
+        <button class="button">ok</button>
 
     </form>

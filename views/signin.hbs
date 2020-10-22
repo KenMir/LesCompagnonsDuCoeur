@@ -1,6 +1,6 @@
 <h1 class="title">Connexion</h1>
-<form method="post" action="/auth/signin" class="form">
-    <input class="input" type="email" name="email" placeholder="votre email" value="deux@gmail.com">
+<form id="container" method="post" action="/auth/signin" class="form">
+    <input class="input" type="email" name="email" placeholder="votre email" value="hamidou@gmail.com">
     <span>
         <input id="input-password" class="input" type="password" name="password" placeholder="votre mot de passe"
             value="123456">
@@ -8,6 +8,10 @@
             <i class="is-clickable fas fa-eye"></i>
         </span>
     </span>
-    <button class="btn">Ok</button>
-    <a href="/auth/signup"><button>S'inscrire</button></a>
+    <div class="boutonok">
+        <button>Ok</button>
+    </div>
 </form>
+<div class="boutoninscrire">
+    <a href="/auth/signup"><button>S'inscrire</button></a>
+</div>

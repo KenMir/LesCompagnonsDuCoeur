@@ -29,6 +29,8 @@ input {
     /* color: #333333; */
 }
 
+.input-text input, .input-text input
+
 /* input::placeholder,
 textarea::placeholder {
     color: #333333;
