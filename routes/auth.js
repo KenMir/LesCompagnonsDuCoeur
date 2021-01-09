@@ -2,8 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const bcrypt = require("bcrypt");
 const userModel = require("./../models/Users");
-// uploader est un middleware, cad une fonction qui s'insère entre une requête http et une réponse http
-const uploader = require("./../config/cloudinary");
+
 
 router.get("/signup", (req, res) => {
     res.render("signup", {
@@ -80,7 +79,7 @@ router.post("/signin", (req, res, next) => {
 /**
  * @see : https://www.youtube.com/watch?v=O6cmuiTBZVs
  */
-router.post("/user-signup", uploader.single("avatar"), (req, res, next) => {
+router.post("/user-signup", (req, res, next) => {
     const user = req.body;
     console.log(user);
     if (req.file) {
